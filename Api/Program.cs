@@ -1,3 +1,4 @@
+using Api.Configurations;
 using Api.Repositories.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,7 @@ builder.Services.AddDbContextPool<CarbonEmissionDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
+builder.AddServices();
 
 var app = builder.Build();
 

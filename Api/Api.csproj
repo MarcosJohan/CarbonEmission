@@ -24,13 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configurations\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Handler\" />
     <Folder Include="Middleware\" />
-    <Folder Include="Models\Dtos\" />
     <Folder Include="Resources\" />
-    <Folder Include="Services\" />
     <Folder Include="Validations\" />
   </ItemGroup>
 
