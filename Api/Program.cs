@@ -1,4 +1,5 @@
 using Api.Configurations;
+using Api.Middleware;
 using Api.Repositories.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,6 +35,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseExceptionHandler();
+
+app.UseMiddleware<ValidationMiddleware>();
 
 app.UseHttpsRedirection();
 
