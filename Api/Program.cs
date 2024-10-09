@@ -2,7 +2,9 @@ using Api.Configurations;
 using Api.Handler;
 using Api.Middleware;
 using Api.Repositories.Context;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using QuestPDF.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +28,12 @@ builder.Services.AddProblemDetails();
 
 builder.AddServiceAuthentication();
 builder.AddServiceAuthorization();
+
+QuestPDF.Settings.License = LicenseType.Community;
+
+builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>());
+
+
 
 var app = builder.Build();
 

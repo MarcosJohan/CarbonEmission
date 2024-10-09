@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Yh+DWLvfJdFqhPMJCMUdd8htrojbXVTKSTyhk1bX3g6LvyM3iivNs5UQunNQDcTeB65fe2/TyQb21GYUKikEyw==",
+  "dgSpecHash": "F0marDfFub3PH87dU760uaPvewzomTaGb+ut3KskBTQkDHXpHEDfrrdedIYPw8IJkAmMjoi6rTxHBxdjvo5d4A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Windows 10\\Desktop\\CarbonEmission\\CarbonEmission\\Api\\Api.csproj",
   "expectedPackageFiles": [
@@ -43,6 +43,7 @@
     "C:\\Users\\Windows 10\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Windows 10\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512",
     "C:\\Users\\Windows 10\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.0\\pomelo.entityframeworkcore.mysql.8.0.0.nupkg.sha512",
+    "C:\\Users\\Windows 10\\.nuget\\packages\\questpdf\\2024.10.0\\questpdf.2024.10.0.nupkg.sha512",
     "C:\\Users\\Windows 10\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\Windows 10\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\Windows 10\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
