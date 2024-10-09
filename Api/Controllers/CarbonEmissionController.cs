@@ -1,10 +1,13 @@
 ﻿using Api.Models.Dtos;
 using Api.Models.Entities;
 using Api.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
 
+[ApiController]
+[Authorize(Roles = "Admin")]
 public class CarbonEmissionController(ICarbonEmissionService service) : ControllerBase
 {
 

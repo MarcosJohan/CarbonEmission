@@ -9,5 +9,7 @@ public static class InjectionContainer
     {
         builder.Services.AddTransient<ICarbonEmissionRepository, CarbonEmissionRepository>();
         builder.Services.AddTransient<ICarbonEmissionService, CarbonEmissionService>();
+        builder.Services.AddTransient<IAuthService, AuthService>();
+        
     }
 }

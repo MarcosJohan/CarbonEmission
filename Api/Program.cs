@@ -24,6 +24,9 @@ builder.AddServices();
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
+builder.AddServiceAuthentication();
+builder.AddServiceAuthorization();
+
 var app = builder.Build();
 
 using (var serviceScope = app.Services.CreateScope())
@@ -31,7 +34,6 @@ using (var serviceScope = app.Services.CreateScope())
     var context = serviceScope.ServiceProvider.GetService<CarbonEmissionDbContext>();
     context?.Database.Migrate();
 }
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -46,7 +48,7 @@ app.UseMiddleware<ValidationMiddleware>();
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseServiceAuth();
 
 app.MapControllers();
 
