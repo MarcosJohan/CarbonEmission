@@ -8,6 +8,10 @@ namespace Api.Controllers;
 public class CarbonEmissionController(ICarbonEmissionService service) : ControllerBase
 {
 
+    ///<summary>
+    /// Obtiene todas las emisiones de carbono registradas.
+    /// </summary>
+    /// <returns>Una lista de emisiones de carbono.</returns>
     [HttpGet("/emissions")]
     [ProducesResponseType(typeof(List<CarbonEmission>),200)]
     [ProducesResponseType(typeof(void),401)]
@@ -16,6 +20,11 @@ public class CarbonEmissionController(ICarbonEmissionService service) : Controll
         return await service.GetAll();
     }
     
+    ///<summary>
+    /// Obtiene una emisión de carbono por ID.
+    /// </summary>
+    /// <param name="id"> ID de la emisión</param>
+    /// <returns>La emisión de carbono con el ID especificado.</returns>
     [HttpGet("/emissions/{id}")]
     [ProducesResponseType(typeof(CarbonEmission),200)]
     [ProducesResponseType(typeof(void),401)]
@@ -24,6 +33,11 @@ public class CarbonEmissionController(ICarbonEmissionService service) : Controll
         return await service.GetById(id);
     }
     
+    ///<summary>
+    /// Obtiene una lista de emisiones de carbono por ID de compañia.
+    /// </summary>
+    /// <param name="companyId"> ID de la compañia</param>
+    /// <returns>Las emisiones de carbono con el ID de la compañia especificada.</returns>
     [HttpGet("/emissions/company/{companyId}")]
     [ProducesResponseType(typeof(List<CarbonEmission>),200)]
     [ProducesResponseType(typeof(void),401)]
@@ -32,6 +46,11 @@ public class CarbonEmissionController(ICarbonEmissionService service) : Controll
         return await service.GetByCompanyId(companyId);
     }
     
+    ///<summary>
+    /// Registra emisiones de carbono.
+    /// </summary>
+    /// <param name="carbonEmission">Emisión de carbon a registrar</param>
+    /// <returns>=ID de la emisión creada.</returns>
     [HttpPost("/emissions")]
     [ProducesResponseType(typeof(void), 201)]
     [ProducesResponseType(typeof(IDictionary<string, string[]>), 400)]
@@ -42,6 +61,10 @@ public class CarbonEmissionController(ICarbonEmissionService service) : Controll
         return Created($"/emissions/{id}", id);
     }
     
+    ///<summary>
+    /// Modifica una emisión de carbono.
+    /// </summary>
+    /// <param name="carbonEmission">Emisión de carbon a modificar</param>
     [HttpPut("/emissions/{id}")]
     [ProducesResponseType(typeof(void),200)]
     [ProducesResponseType(typeof(IDictionary<string, string[]>), 400)]
@@ -52,6 +75,10 @@ public class CarbonEmissionController(ICarbonEmissionService service) : Controll
         return Ok();
     }
  
+    ///<summary>
+    /// Elimina una emisión de carbono.
+    /// </summary>
+    /// <param name="id">ID de la emisión</param>
     [HttpDelete("/emissions/{id}")]
     [ProducesResponseType(typeof(void),200)]
     [ProducesResponseType(typeof(void),401)]
