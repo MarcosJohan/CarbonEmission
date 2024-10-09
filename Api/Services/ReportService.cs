@@ -110,7 +110,7 @@ public class ReportService(IReportRepository repository) : IReportService
                 {
                     txt.Span("Pagina ").FontSize(10);
                     txt.CurrentPageNumber().FontSize(10);
-                    txt.Span("de ").FontSize(10);
+                    txt.Span(" de ").FontSize(10);
                     txt.TotalPages().FontSize(10);
                 });
             });

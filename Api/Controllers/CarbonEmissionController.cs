@@ -67,6 +67,7 @@ public class CarbonEmissionController(ICarbonEmissionService service) : Controll
     ///<summary>
     /// Modifica una emisión de carbono.
     /// </summary>
+    /// <param name="id">Id de la emisión de carbono a modificar</param>
     /// <param name="carbonEmission">Emisión de carbon a modificar</param>
     [HttpPut("/emissions/{id}")]
     [ProducesResponseType(typeof(void),200)]
